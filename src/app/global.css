@@ -7,6 +7,13 @@
   --font-styrene-a: 'Styrene A', sans-serif;
   --font-styrene-b: 'Styrene B', sans-serif;
   --font-tiempo: 'Tiempo Text', serif;
+  
+  /* Цвета в CSS переменных (для JavaScript доступа) */
+  --color-cream: #f5f2ed;
+  --color-cream-dark: #e6e0d7;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #444444;
+  --color-accent: #6366f1;
 }
 
 html {
@@ -17,6 +24,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-color: #f5f2ed; /* Кремовый фон как у Anthropic */
+  color: #444444; /* Основной цвет текста */
 }
 
 /* Убираем стандартные стили */
@@ -32,13 +41,24 @@ img {
   height: auto;
 }
 
-/* Фокус состояния */
+/* Фокус состояния с твоим фиолетовым */
 :focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
 :focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #6366f1;
   outline-offset: 2px;
+}
+
+/* Сглаживание для лучшего рендеринга шрифтов */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Плавные переходы по умолчанию */
+a, button {
+  transition: all 0.2s ease-in-out;
 }
