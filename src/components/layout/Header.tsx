@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { styreneA, styreneB, tiempoText } from '@/lib/fonts'
-import './global.css'
 
 export const metadata: Metadata = {
   title: 'Asentic - MedTech Innovation',
