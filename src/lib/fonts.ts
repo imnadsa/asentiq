@@ -1,4 +1,3 @@
-// src/lib/fonts.ts
 import localFont from 'next/font/local'
 
 export const styreneA = localFont({
@@ -63,9 +62,6 @@ export const tiempoText = localFont({
       style: 'normal',
     },
   ],
-  variable: '--font-tiempo',
-  display: 'swap',
-})
   variable: '--font-tiempo',
   display: 'swap',
 })
