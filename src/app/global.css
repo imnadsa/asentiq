@@ -1,1 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Базовые стили */
+:root {
+  --font-styrene-a: 'Styrene A', sans-serif;
+  --font-styrene-b: 'Styrene B', sans-serif;
+  --font-tiempo: 'Tiempo Text', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Убираем стандартные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стили для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Фокус состояния */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
