@@ -1,72 +1,22 @@
-"use client";
+import type { Metadata } from 'next'
+import { styreneA, styreneB, tiempoText } from '@/lib/fonts'
+import './global.css'
 
-import React, { useState } from 'react';
+export const metadata: Metadata = {
+  title: 'Asentic - MedTech Innovation',
+  description: 'Развиваем медицинские технологии и AI для улучшения здравоохранения',
+}
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <header className="bg-cream/80 backdrop-blur-sm border-b border-cream-dark sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          {/* Логотип */}
-          <div className="flex-shrink-0">
-            <span className="text-2xl font-styrene-a font-bold text-text-primary">
-              ASENTIC
-            </span>
-          </div>
-
-          {/* Навигация для десктопа */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-              Продукты
-            </a>
-            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-              О нас
-            </a>
-            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-              Контакты
-            </a>
-          </nav>
-
-          {/* CTA кнопка */}
-          <div className="hidden md:block">
-            <button className="bg-text-primary text-white px-6 py-2.5 rounded-lg font-styrene-b font-medium text-sm">
-              Попробовать Hippocrat AI
-            </button>
-          </div>
-
-          {/* Мобильное меню */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-text-secondary"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          {/* Мобильное меню */}
-          {isMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 right-0 bg-cream border-b border-cream-dark">
-              <div className="py-4 px-4 space-y-4">
-                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                  Продукты
-                </a>
-                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                  О нас
-                </a>
-                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                  Контакты
-                </a>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </header>
-  );
-};
-
-export default Header;
+    <html lang="ru" className={`${styreneA.variable} ${styreneB.variable} ${tiempoText.variable}`}>
+      <body className="font-styrene-a antialiased">
+        {children}
+      </body>
+    </html>
+  )
+}
