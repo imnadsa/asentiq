@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 
 const Header = () => {
@@ -17,64 +19,51 @@ const Header = () => {
 
           {/* Навигация для десктопа */}
           <nav className="hidden md:flex space-x-8">
-            <a 
-              href="#" 
-              className="text-text-secondary hover:text-text-primary font-styrene-b font-medium transition-colors duration-200"
-            >
+            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
               Продукты
             </a>
-            <a 
-              href="#" 
-              className="text-text-secondary hover:text-text-primary font-styrene-b font-medium transition-colors duration-200"
-            >
+            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
               О нас
             </a>
-            <a 
-              href="#" 
-              className="text-text-secondary hover:text-text-primary font-styrene-b font-medium transition-colors duration-200"
-            >
+            <a href="#" className="text-text-secondary hover:text-text-primary font-styrene-b font-medium">
               Контакты
             </a>
           </nav>
 
-          {/* CTA кнопка для десктопа */}
+          {/* CTA кнопка */}
           <div className="hidden md:block">
-            <button className="bg-text-primary text-white px-6 py-2.5 rounded-lg font-styrene-b font-medium text-sm transition-all duration-200 hover:bg-text-secondary">
+            <button className="bg-text-primary text-white px-6 py-2.5 rounded-lg font-styrene-b font-medium text-sm">
               Попробовать Hippocrat AI
             </button>
           </div>
 
-          {/* Мобильное меню кнопка */}
+          {/* Мобильное меню */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-text-secondary hover:text-text-primary"
+            className="md:hidden p-2 text-text-secondary"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-        </div>
 
-        {/* Мобильное меню */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-cream-dark">
-            <div className="py-4 space-y-4">
-              <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                Продукты
-              </a>
-              <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                О нас
-              </a>
-              <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
-                Контакты
-              </a>
+          {/* Мобильное меню */}
+          {isMenuOpen && (
+            <div className="md:hidden absolute top-16 left-0 right-0 bg-cream border-b border-cream-dark">
+              <div className="py-4 px-4 space-y-4">
+                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
+                  Продукты
+                </a>
+                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
+                  О нас
+                </a>
+                <a href="#" className="block text-text-secondary hover:text-text-primary font-styrene-b font-medium">
+                  Контакты
+                </a>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </header>
   );
