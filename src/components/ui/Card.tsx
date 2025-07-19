@@ -9,7 +9,13 @@ interface CardProps {
   hover?: boolean
 }
 
-const Card: React.FC<CardProps> = ({ 
+const Card: React.FC<CardProps> & {
+  Header: React.FC<{ children: React.ReactNode; className?: string }>
+  Title: React.FC<{ children: React.ReactNode; className?: string }>
+  Description: React.FC<{ children: React.ReactNode; className?: string }>
+  Content: React.FC<{ children: React.ReactNode; className?: string }>
+  Footer: React.FC<{ children: React.ReactNode; className?: string }>
+} = ({ 
   children, 
   className, 
   variant = 'default',
@@ -96,7 +102,7 @@ const CardFooter: React.FC<{ children: React.ReactNode; className?: string }> = 
   </div>
 )
 
-// Экспортируем все компоненты
+// Присваиваем подкомпоненты
 Card.Header = CardHeader
 Card.Title = CardTitle
 Card.Description = CardDescription
