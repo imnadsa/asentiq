@@ -240,7 +240,7 @@ const Contact: React.FC = () => {
               </Button>
 
               {/* Примечание о конфиденциальности */}
-              <p className="text-xs text-text-muted font-styrene-b">
+              <p className="text-xs text-muted font-styrene-b">
                 Отправляя форму, вы соглашаетесь с нашей{' '}
                 <a href="/privacy" className="text-accent-600 hover:text-accent-700 underline">
                   политикой конфиденциальности
