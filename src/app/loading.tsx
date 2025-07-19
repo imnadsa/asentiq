@@ -20,28 +20,25 @@ const Loading: React.FC = () => {
         {/* Текст */}
         <div className="text-center space-y-2">
           <h2 className="text-lg font-styrene-a font-semibold text-text-primary">
-            Asentic
+            Загружаем Asentic
           </h2>
           <p className="text-text-secondary font-styrene-b">
             Подождите немного...
           </p>
         </div>
 
-        {/* Прогресс бар */}
+        {/* Прогресс бар с CSS анимацией */}
         <div className="w-64 h-1 bg-cream-dark rounded-full overflow-hidden">
-          <div className="h-full bg-accent-500 rounded-full animate-pulse" style={{
-            animation: 'loadingProgress 2s ease-in-out infinite'
-          }} />
+          <div 
+            className="h-full bg-accent-500 rounded-full animate-pulse"
+            style={{
+              animation: 'loadingProgress 2s ease-in-out infinite'
+            }}
+          />
         </div>
       </div>
       
-      <style jsx>{`
-        @keyframes loadingProgress {
-          0% { width: 0%; }
-          50% { width: 70%; }
-          100% { width: 100%; }
-        }
-      `}</style>
+      {/* Стили через обычный CSS в globals.css */}
     </div>
   )
 }
