@@ -4,9 +4,9 @@
 
 /* Базовые стили */
 :root {
-  --font-styrene-a: 'Styrene A', sans-serif;
-  --font-styrene-b: 'Styrene B', sans-serif;
-  --font-tiempo: 'Tiempo Text', serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-golos-text: 'Golos Text', sans-serif;
+  --font-tiempo: 'Golos Text', sans-serif;
   
   /* Цвета в CSS переменных (для JavaScript доступа) */
   --color-cream: #f5f2ed;
@@ -56,6 +56,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
   font-weight: 600;
+  font-family: var(--font-manrope); /* Manrope для заголовков */
 }
 
 /* Плавные переходы по умолчанию */
