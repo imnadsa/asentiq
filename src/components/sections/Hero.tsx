@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                     <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
                       Опробуйте Hippocrat AI
                     </h2>
-                    <p className="text-2xl text-text-secondary font-golos-text leading-relaxed">
+                    <p className="text-xl text-text-secondary font-golos-text leading-relaxed">
                       Персональный помощник для студента-медика, доступен сейчас
                     </p>
                   </div>
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
                     <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
                       Медицинское Digital-Агенство
                     </h2>
-                    <p className="text-2xl text-text-secondary font-golos-text leading-relaxed">
+                    <p className="text-xl text-text-secondary font-golos-text leading-relaxed">
                       Цифровые решения для медицинских клиник
                     </p>
                   </div>
