@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="text-white" style={{backgroundColor: '#141413'}}>
       <Container size="xl" padding="lg">
         {/* Основной контент футера */}
         <div className="py-16 lg:py-20">
@@ -83,9 +83,9 @@ const Footer: React.FC = () => {
             <div className="col-span-2 md:col-span-3 lg:col-span-1">
               <Link href="/" className="flex items-center space-x-2 mb-6">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-gray-900 font-manrope font-bold text-lg">A</span>
+                  <span className="text-gray-900 font-coolvetica font-bold text-lg">A</span>
                 </div>
-                <span className="text-xl font-manrope font-semibold text-white">
+                <span className="text-xl font-coolvetica font-semibold text-white">
                   Asentic
                 </span>
               </Link>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
 
             {/* Продукты */}
             <div>
-              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-coolvetica font-semibold text-white uppercase tracking-wider mb-4">
                 Продукты
               </h3>
               <ul className="space-y-3">
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
 
             {/* Решения */}
             <div>
-              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-coolvetica font-semibold text-white uppercase tracking-wider mb-4">
                 Решения
               </h3>
               <ul className="space-y-3">
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
 
             {/* Компания */}
             <div>
-              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-coolvetica font-semibold text-white uppercase tracking-wider mb-4">
                 Компания
               </h3>
               <ul className="space-y-3">
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
 
             {/* Поддержка */}
             <div>
-              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-coolvetica font-semibold text-white uppercase tracking-wider mb-4">
                 Поддержка
               </h3>
               <ul className="space-y-3">
@@ -169,7 +169,7 @@ const Footer: React.FC = () => {
 
             {/* Правовая информация */}
             <div>
-              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-coolvetica font-semibold text-white uppercase tracking-wider mb-4">
                 Правовая информация
               </h3>
               <ul className="space-y-3">
