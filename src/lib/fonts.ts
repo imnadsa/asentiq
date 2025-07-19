@@ -1,25 +1,20 @@
 import localFont from 'next/font/local'
 
-// Manrope для заголовков (замена Styrene A)
-export const manrope = localFont({
+// Coolvetica для заголовков
+export const coolvetica = localFont({
   src: [
     {
-      path: './../../public/fonts/Manrope Regular.woff2',
+      path: './../../public/fonts/Coolvetica Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './../../public/fonts/Manrope Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './../../public/fonts/Manrope Bold.woff2',
+      path: './../../public/fonts/Coolvetica Bold.woff2',
       weight: '700',
       style: 'normal',
     },
   ],
-  variable: '--font-manrope',
+  variable: '--font-coolvetica',
   display: 'swap',
 })
 
