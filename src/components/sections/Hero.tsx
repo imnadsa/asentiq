@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
   }, [currentWordIndex, words.length])
 
   return (
-    <section className="relative min-h-screen bg-cream flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen bg-cream flex items-center justify-center overflow-hidden pt-24 md:pt-16">
       <Container size="xl" padding="lg" className="relative">
         <div className="space-y-12">
           
@@ -53,48 +53,50 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Карточки продуктов */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            
-            {/* Карточка Hippocrat AI */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="space-y-4">
-                <div>
-                  <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
-                    HIPPOCRAT AI
+          {/* Карточки продуктов - ограничиваем ширину на десктопе */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-4xl">
+              
+              {/* Карточка Hippocrat AI */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square lg:aspect-auto lg:min-h-[280px]">
+                <div className="space-y-4 h-full flex flex-col">
+                  <div className="flex-1">
+                    <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
+                      HIPPOCRAT AI
+                    </div>
+                    <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
+                      Опробуйте Hippocrat AI
+                    </h2>
+                    <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
+                      Hippocrat AI - персональный помощник для студента-медика, доступен сейчас
+                    </p>
                   </div>
-                  <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
-                    Опробуйте Hippocrat AI
-                  </h2>
-                  <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
-                    Hippocrat AI - персональный помощник для студента-медика, доступен сейчас
-                  </p>
+                  
+                  <button className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200 mt-auto">
+                    Спросить Hippocrat AI
+                  </button>
                 </div>
-                
-                <button className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200">
-                  Спросить Hippocrat AI
-                </button>
               </div>
-            </div>
 
-            {/* Карточка Digital-Агенство */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="space-y-4">
-                <div>
-                  <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
-                    DIGITAL-АГЕНСТВО
+              {/* Карточка Digital-Агенство */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square lg:aspect-auto lg:min-h-[280px]">
+                <div className="space-y-4 h-full flex flex-col">
+                  <div className="flex-1">
+                    <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
+                      DIGITAL-АГЕНСТВО
+                    </div>
+                    <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
+                      Медицинское Digital-Агенство
+                    </h2>
+                    <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
+                      Hippocrat Digital - цифровые решения для медицинских клиник
+                    </p>
                   </div>
-                  <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
-                    Медицинское Digital-Агенство
-                  </h2>
-                  <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
-                    Hippocrat Digital - цифровые решения для медицинских клиник
-                  </p>
+                  
+                  <button className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200 mt-auto">
+                    Узнать про Агенство
+                  </button>
                 </div>
-                
-                <button className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200">
-                  Узнать про Агенство
-                </button>
               </div>
             </div>
           </div>
