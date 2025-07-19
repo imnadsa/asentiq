@@ -4,22 +4,50 @@ import Container from '@/components/ui/Container'
 import { SITE_CONFIG } from '@/lib/constants'
 
 const navigation = {
-  main: [
-    { name: 'Главная', href: '/' },
-    { name: 'Продукты', href: '/products' },
-    { name: 'О нас', href: '/about' },
-    { name: 'Контакты', href: '/contact' },
-  ],
-  products: [
+  product: [
     { name: 'Hippocrat AI', href: '/products#hippocrat-ai' },
-    { name: 'Hippocrat Digital', href: '/products#hippocrat-digital' },
+    { name: 'Digital-Агенство', href: '/products#hippocrat-digital' },
+    { name: 'Тарифы', href: '/pricing' },
+    { name: 'API документация', href: '/docs' },
+    { name: 'Демо', href: '/demo' },
+  ],
+  company: [
+    { name: 'О нас', href: '/about' },
+    { name: 'Наша команда', href: '/team' },
+    { name: 'Карьера', href: '/careers' },
+    { name: 'Новости', href: '/news' },
+    { name: 'Блог', href: '/blog' },
+  ],
+  solutions: [
+    { name: 'Для студентов', href: '/solutions/students' },
+    { name: 'Для клиник', href: '/solutions/clinics' },
+    { name: 'Для вузов', href: '/solutions/universities' },
+    { name: 'Партнерство', href: '/partners' },
+    { name: 'Интеграции', href: '/integrations' },
+  ],
+  support: [
+    { name: 'Центр поддержки', href: '/support' },
+    { name: 'Документация', href: '/docs' },
+    { name: 'Статус сервисов', href: '/status' },
+    { name: 'Обратная связь', href: '/feedback' },
+    { name: 'Сообщество', href: '/community' },
   ],
   legal: [
     { name: 'Политика конфиденциальности', href: '/privacy' },
     { name: 'Условия использования', href: '/terms' },
-    { name: 'Cookies', href: '/cookies' },
+    { name: 'Политика cookies', href: '/cookies' },
+    { name: 'Лицензии', href: '/licenses' },
   ],
   social: [
+    {
+      name: 'YouTube',
+      href: 'https://youtube.com/@asentic',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      ),
+    },
     {
       name: 'LinkedIn',
       href: `https://linkedin.com/${SITE_CONFIG.social.linkedin}`,
@@ -33,17 +61,8 @@ const navigation = {
       name: 'Twitter',
       href: `https://twitter.com/${SITE_CONFIG.social.twitter}`,
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-        </svg>
-      ),
-    },
-    {
-      name: 'GitHub',
-      href: 'https://github.com/asentic',
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
       ),
     },
@@ -54,116 +73,143 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-white border-t border-cream-dark">
+    <footer className="bg-gray-900 text-white">
       <Container size="xl" padding="lg">
         {/* Основной контент футера */}
-        <div className="py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="py-16 lg:py-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
             
             {/* Логотип и описание */}
-            <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-styrene-a font-bold text-lg">A</span>
+            <div className="col-span-2 md:col-span-3 lg:col-span-1">
+              <Link href="/" className="flex items-center space-x-2 mb-6">
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-gray-900 font-manrope font-bold text-lg">A</span>
                 </div>
-                <span className="text-xl font-styrene-a font-semibold text-text-primary">
+                <span className="text-xl font-manrope font-semibold text-white">
                   Asentic
                 </span>
               </Link>
-              
-              <p className="text-text-secondary font-styrene-b mb-6 max-w-md leading-relaxed">
-                Превращаем медицинские вызовы в технологические решения. 
-                Разрабатываем ИИ-продукты для улучшения здравоохранения.
-              </p>
-              
-              <div className="flex space-x-4">
-                {navigation.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-text-secondary hover:text-accent-500 transition-colors duration-200"
-                    aria-label={item.name}
-                  >
-                    {item.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Навигация */}
-            <div>
-              <h3 className="text-sm font-styrene-a font-semibold text-text-primary uppercase tracking-wide mb-4">
-                Навигация
-              </h3>
-              <ul className="space-y-3">
-                {navigation.main.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-text-secondary hover:text-text-primary font-styrene-b transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
 
             {/* Продукты */}
             <div>
-              <h3 className="text-sm font-styrene-a font-semibold text-text-primary uppercase tracking-wide mb-4">
+              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
                 Продукты
               </h3>
               <ul className="space-y-3">
-                {navigation.products.map((item) => (
+                {navigation.product.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-text-secondary hover:text-text-primary font-styrene-b transition-colors duration-200"
+                      className="text-gray-400 hover:text-white font-golos-text text-sm transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-              
-              {/* Контактная информация */}
-              <div className="mt-6">
-                <h4 className="text-sm font-styrene-a font-semibold text-text-primary uppercase tracking-wide mb-3">
-                  Контакты
-                </h4>
-                <a
-                  href={`mailto:${SITE_CONFIG.email}`}
-                  className="text-text-secondary hover:text-accent-500 font-styrene-b transition-colors duration-200"
-                >
-                  {SITE_CONFIG.email}
-                </a>
-              </div>
+            </div>
+
+            {/* Решения */}
+            <div>
+              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+                Решения
+              </h3>
+              <ul className="space-y-3">
+                {navigation.solutions.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-400 hover:text-white font-golos-text text-sm transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Компания */}
+            <div>
+              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+                Компания
+              </h3>
+              <ul className="space-y-3">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-400 hover:text-white font-golos-text text-sm transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Поддержка */}
+            <div>
+              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+                Поддержка
+              </h3>
+              <ul className="space-y-3">
+                {navigation.support.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-400 hover:text-white font-golos-text text-sm transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Правовая информация */}
+            <div>
+              <h3 className="text-sm font-manrope font-semibold text-white uppercase tracking-wider mb-4">
+                Правовая информация
+              </h3>
+              <ul className="space-y-3">
+                {navigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-400 hover:text-white font-golos-text text-sm transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Нижняя часть */}
-        <div className="py-6 border-t border-cream-dark">
+        <div className="py-6 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             
             {/* Копирайт */}
-            <div className="text-sm text-text-secondary font-styrene-b">
+            <div className="text-sm text-gray-400 font-golos-text">
               © {currentYear} {SITE_CONFIG.name}. Все права защищены.
             </div>
 
-            {/* Правовые ссылки */}
-            <div className="flex flex-wrap justify-center md:justify-end space-x-6">
-              {navigation.legal.map((item) => (
-                <Link
+            {/* Социальные сети */}
+            <div className="flex space-x-6">
+              {navigation.social.map((item) => (
+                <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-text-secondary hover:text-text-primary font-styrene-b transition-colors duration-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  aria-label={item.name}
                 >
-                  {item.name}
-                </Link>
+                  {item.icon}
+                </a>
               ))}
             </div>
           </div>
