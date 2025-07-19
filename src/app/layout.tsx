@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { styreneA, styreneB, tiempoText } from '@/lib/fonts'
-import './global.css'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Asentic - Медицинские Технологии',
@@ -51,7 +51,7 @@ export default function RootLayout({
       lang="ru" 
       className={`${styreneA.variable} ${styreneB.variable} ${tiempoText.variable}`}
     >
-      <body className="font-styrene-a antialiased">
+      <body className="font-styrene-b antialiased">
         {children}
       </body>
     </html>
