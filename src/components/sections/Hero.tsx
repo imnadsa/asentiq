@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* 3. Текст "лаборатория" без кнопки */}
-            <p className="text-text-secondary font-golos-text text-sm max-w-md leading-relaxed text-left pt-4">
+            <p className="text-base text-text-secondary font-golos-text max-w-md leading-relaxed text-left pt-4">
               Asentic — лаборатория МедТех инноваций. Мы постоянно работаем над созданием новых решений в медицине.
             </p>
 
