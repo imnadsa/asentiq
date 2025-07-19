@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { styreneA, styreneB, tiempoText } from '@/lib/fonts'
+import { manrope, golosText, tiempoText } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -49,9 +49,9 @@ export default function RootLayout({
   return (
     <html 
       lang="ru" 
-      className={`${styreneA.variable} ${styreneB.variable} ${tiempoText.variable}`}
+      className={`${manrope.variable} ${golosText.variable} ${tiempoText.variable}`}
     >
-      <body className="font-styrene-b antialiased">
+      <body className="font-golos-text antialiased">
         {children}
       </body>
     </html>
