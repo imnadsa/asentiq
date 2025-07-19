@@ -5,27 +5,32 @@ const values = [
   {
     id: 1,
     title: 'Инновации в медицине',
-    description: 'Применяем передовые технологии ИИ для решения сложных медицинских задач',
-    bgColor: 'bg-orange-100', // Бежевый как у Anthropic
+    bgColor: '#e3dacc', // Кастомный бежевый
     iconPlaceholder: 'Иконка инноваций'
   },
   {
     id: 2,
     title: 'Этичность и безопасность',
-    description: 'Соблюдаем высочайшие стандарты медицинской этики и конфиденциальности данных',
-    bgColor: 'bg-teal-100', // Мятный как у Anthropic
+    bgColor: '#bcd1ca', // Кастомный мятный
     iconPlaceholder: 'Иконка этики'
   },
   {
     id: 3,
     title: 'Доступность решений',
-    description: 'Делаем медицинские технологии доступными для всех, независимо от местоположения',
-    bgColor: 'bg-purple-100', // Фиолетовый как у Anthropic
+    bgColor: '#cbcadb', // Кастомный фиолетовый
     iconPlaceholder: 'Иконка доступности'
   }
 ]
 
 const About: React.FC = () => {
+  const handleVacanciesClick = () => {
+    window.location.href = '/careers'
+  }
+
+  const handleManagerClick = () => {
+    window.location.href = '/contact'
+  }
+
   return (
     <section className="py-20 lg:py-32 bg-cream">
       <Container size="xl" padding="lg">
@@ -39,7 +44,7 @@ const About: React.FC = () => {
           {/* Левая колонка - акцентный заголовок */}
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-text-primary leading-tight">
-              В Asentic мы создаём продукты для здорового будущего медицины.
+              В Asentic мы создаём цифровые продукты для здорового будущего медицины.
             </h2>
           </div>
           
@@ -66,11 +71,12 @@ const About: React.FC = () => {
         </div>
 
         {/* Сетка ценностей - 1 на мобильных, 3 на десктопе */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-20 lg:mb-24">
           {values.map((value) => (
             <div
               key={value.id}
-              className={`${value.bgColor} rounded-3xl p-8 lg:p-10 transition-transform duration-300 hover:scale-105`}
+              className="rounded-3xl p-8 lg:p-10 transition-transform duration-300 hover:scale-105"
+              style={{ backgroundColor: value.bgColor }}
             >
               {/* Место для иконки */}
               <div className="w-24 h-24 lg:w-32 lg:h-32 mb-8 bg-white bg-opacity-50 rounded-2xl flex items-center justify-center">
@@ -79,22 +85,38 @@ const About: React.FC = () => {
                 </span>
               </div>
               
-              {/* Заголовок ценности */}
-              <h4 className="text-xl lg:text-2xl font-manrope font-bold text-text-primary mb-4 leading-tight">
+              {/* Только заголовок ценности, без описания */}
+              <h4 className="text-xl lg:text-2xl font-manrope font-bold text-text-primary leading-tight">
                 {value.title}
               </h4>
-              
-              {/* Описание ценности */}
-              <p className="text-base text-text-secondary font-golos-text leading-relaxed">
-                {value.description}
-              </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA секция как у Anthropic */}
+        <div className="text-center space-y-8">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-text-primary leading-tight max-w-4xl mx-auto">
+            Хотите помочь нам создавать этичный мир технологичной медицины?
+          </h3>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={handleVacanciesClick}
+              className="bg-text-primary text-white px-8 py-4 rounded-xl font-golos-text font-medium text-lg hover:bg-gray-800 transition-colors duration-200"
+            >
+              Уточнить Вакансии
+            </button>
+            
+            <button 
+              onClick={handleManagerClick}
+              className="border-2 border-cream-dark text-text-primary px-8 py-4 rounded-xl font-golos-text font-medium text-lg hover:border-text-primary hover:shadow-sm transition-all duration-200"
+            >
+              Связаться с Менеджером
+            </button>
+          </div>
         </div>
 
       </Container>
     </section>
   )
 }
-
-export default About
