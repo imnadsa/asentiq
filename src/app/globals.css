@@ -4,24 +4,16 @@
 
 /* Принудительная загрузка шрифтов */
 @font-face {
-  font-family: 'Manrope';
-  src: url('/fonts/Manrope Regular.woff2') format('woff2');
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope';
-  src: url('/fonts/Manrope Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('/fonts/Manrope Bold.woff2') format('woff2');
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -53,7 +45,7 @@
 
 /* Базовые стили */
 :root {
-  --font-manrope: 'Manrope', sans-serif;
+  --font-coolvetica: 'Coolvetica', sans-serif;
   --font-golos-text: 'Golos Text', sans-serif;
   --font-tiempo: 'Golos Text', sans-serif;
   
@@ -106,7 +98,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
   font-weight: 600;
-  font-family: 'Manrope', sans-serif !important;
+  font-family: 'Coolvetica', sans-serif !important;
 }
 
 /* Плавные переходы */
