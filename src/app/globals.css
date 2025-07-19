@@ -2,13 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Принудительная загрузка шрифтов */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/fonts/Golos Text Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/fonts/Golos Text Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/fonts/Golos Text Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Базовые стили */
 :root {
   --font-manrope: 'Manrope', sans-serif;
   --font-golos-text: 'Golos Text', sans-serif;
   --font-tiempo: 'Golos Text', sans-serif;
   
-  /* Цвета в CSS переменных (для JavaScript доступа) */
+  /* Цвета в CSS переменных */
   --color-cream: #f5f2ed;
   --color-cream-dark: #e6e0d7;
   --color-text-primary: #1a1a1a;
@@ -24,8 +73,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: #f5f2ed; /* Кремовый фон как у Anthropic */
-  color: #444444; /* Основной цвет текста */
+  background-color: #f5f2ed;
+  color: #444444;
+  font-family: 'Golos Text', sans-serif !important;
 }
 
 /* Убираем стандартные стили */
@@ -41,7 +91,7 @@ img {
   height: auto;
 }
 
-/* Фокус состояния с твоим фиолетовым */
+/* Фокус состояния */
 :focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -52,19 +102,19 @@ img {
   outline-offset: 2px;
 }
 
-/* Сглаживание для лучшего рендеринга шрифтов */
+/* Принудительные шрифты для заголовков */
 h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
   font-weight: 600;
-  font-family: var(--font-manrope); /* Manrope для заголовков */
+  font-family: 'Manrope', sans-serif !important;
 }
 
-/* Плавные переходы по умолчанию */
+/* Плавные переходы */
 a, button {
   transition: all 0.2s ease-in-out;
 }
 
-/* Анимация для loading страницы */
+/* Анимация для loading */
 @keyframes loadingProgress {
   0% { width: 0%; }
   50% { width: 70%; }
