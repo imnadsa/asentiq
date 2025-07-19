@@ -1,14 +1,19 @@
+import React from 'react'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Contact from '@/components/sections/Contact'
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-cream">
-      <div className="max-w-4xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-styrene-a font-bold text-text-primary mb-8">
-          Контакты
-        </h1>
-        <p className="text-lg text-text-secondary font-styrene-b">
-          Страница в разработке...
-        </p>
+      <Header />
+      
+      {/* Отступ для фиксированного хедера */}
+      <div className="pt-16 lg:pt-20">
+        <Contact />
       </div>
+      
+      <Footer />
     </main>
   )
 }
