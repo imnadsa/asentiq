@@ -8,9 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'styrene-a': ['var(--font-styrene-a)', 'sans-serif'],
-        'styrene-b': ['var(--font-styrene-b)', 'sans-serif'],
-        'tiempo': ['var(--font-tiempo)', 'serif'],
+        'manrope': ['var(--font-manrope)', 'sans-serif'],
+        'golos-text': ['var(--font-golos-text)', 'sans-serif'],
+        'tiempo': ['var(--font-golos-text)', 'sans-serif'], // используем Golos для акцентов тоже
+        
+        // Для обратной совместимости (можно удалить позже)
+        'styrene-a': ['var(--font-manrope)', 'sans-serif'],
+        'styrene-b': ['var(--font-golos-text)', 'sans-serif'],
       },
       colors: {
         // Anthropic inspired colors
