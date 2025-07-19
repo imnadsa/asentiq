@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { manrope, golosText, tiempoText } from '@/lib/fonts'
+import { coolvetica, golosText, tiempoText } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -49,20 +49,20 @@ export default function RootLayout({
   return (
     <html 
       lang="ru" 
-      className={`${manrope.variable} ${golosText.variable} ${tiempoText.variable}`}
+      className={`${coolvetica.variable} ${golosText.variable} ${tiempoText.variable}`}
     >
       <head>
         {/* Принудительная preload шрифтов */}
         <link
           rel="preload"
-          href="/fonts/Manrope Regular.woff2"
+          href="/fonts/Coolvetica Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/Manrope Medium.woff2"
+          href="/fonts/Coolvetica Bold.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
