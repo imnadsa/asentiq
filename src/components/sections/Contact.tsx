@@ -59,11 +59,11 @@ const Contact: React.FC = () => {
               </svg>
             </div>
             
-            <h2 className="text-2xl font-styrene-a font-bold text-text-primary mb-4">
+            <h2 className="text-2xl font-coolvetica font-bold text-text-primary mb-4">
               Спасибо за обращение!
             </h2>
             
-            <p className="text-text-secondary font-styrene-b">
+            <p className="text-text-secondary font-golos-text">
               Мы получили ваше сообщение и свяжемся с вами в ближайшее время.
             </p>
           </Card>
@@ -73,18 +73,18 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-32 bg-cream">
       <Container size="xl" padding="lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           
           {/* Левая часть - информация */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-styrene-a font-bold text-text-primary mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-coolvetica font-bold text-text-primary mb-6 leading-tight">
                 Готовы обсудить ваш проект?
               </h1>
               
-              <p className="text-lg text-text-secondary font-styrene-b leading-relaxed">
+              <p className="text-lg text-text-secondary font-golos-text leading-relaxed">
                 Мы всегда открыты для новых идей и сотрудничества.
               </p>
             </div>
@@ -98,8 +98,8 @@ const Contact: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-styrene-a font-semibold text-text-primary mb-1">Email</h3>
-                  <p className="text-text-secondary font-styrene-b">hello@asentic.com</p>
+                  <h3 className="font-coolvetica font-semibold text-text-primary mb-1">Email</h3>
+                  <p className="text-text-secondary font-golos-text">hello@asentic.com</p>
                 </div>
               </div>
 
@@ -110,8 +110,8 @@ const Contact: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-styrene-a font-semibold text-text-primary mb-1">Время ответа</h3>
-                  <p className="text-text-secondary font-styrene-b">В течение 24 часов</p>
+                  <h3 className="font-coolvetica font-semibold text-text-primary mb-1">Время ответа</h3>
+                  <p className="text-text-secondary font-golos-text">В течение 24 часов</p>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
               
               {/* Тип обращения */}
               <div>
-                <label htmlFor="type" className="block text-sm font-styrene-a font-semibold text-text-primary mb-2">
+                <label htmlFor="type" className="block text-sm font-coolvetica font-semibold text-text-primary mb-2">
                   Тип обращения
                 </label>
                 <select
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
                   name="type"
                   value={formData.type}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-styrene-b transition-colors"
+                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-golos-text transition-colors"
                   required
                 >
                   <option value="general">Общие вопросы</option>
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
 
               {/* Имя */}
               <div>
-                <label htmlFor="name" className="block text-sm font-styrene-a font-semibold text-text-primary mb-2">
+                <label htmlFor="name" className="block text-sm font-coolvetica font-semibold text-text-primary mb-2">
                   Ваше имя
                 </label>
                 <input
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-styrene-b transition-colors"
+                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-golos-text transition-colors"
                   placeholder="Введите ваше имя"
                   required
                 />
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-styrene-a font-semibold text-text-primary mb-2">
+                <label htmlFor="email" className="block text-sm font-coolvetica font-semibold text-text-primary mb-2">
                   Email
                 </label>
                 <input
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-styrene-b transition-colors"
+                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-golos-text transition-colors"
                   placeholder="your@email.com"
                   required
                 />
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
 
               {/* Компания */}
               <div>
-                <label htmlFor="company" className="block text-sm font-styrene-a font-semibold text-text-primary mb-2">
+                <label htmlFor="company" className="block text-sm font-coolvetica font-semibold text-text-primary mb-2">
                   Компания (необязательно)
                 </label>
                 <input
@@ -186,14 +186,14 @@ const Contact: React.FC = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-styrene-b transition-colors"
+                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-golos-text transition-colors"
                   placeholder="Название вашей компании"
                 />
               </div>
 
               {/* Сообщение */}
               <div>
-                <label htmlFor="message" className="block text-sm font-styrene-a font-semibold text-text-primary mb-2">
+                <label htmlFor="message" className="block text-sm font-coolvetica font-semibold text-text-primary mb-2">
                   Сообщение
                 </label>
                 <textarea
@@ -202,7 +202,7 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-styrene-b transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent font-golos-text transition-colors resize-none"
                   placeholder="Расскажите подробнее о вашем проекте или вопросе..."
                   required
                 />
@@ -221,7 +221,7 @@ const Contact: React.FC = () => {
               </Button>
 
               {/* Примечание о конфиденциальности */}
-              <p className="text-xs text-muted font-styrene-b">
+              <p className="text-xs text-muted font-golos-text">
                 Отправляя форму, вы соглашаетесь с нашей{' '}
                 <a href="/privacy" className="text-accent-600 hover:text-accent-700 underline">
                   политикой конфиденциальности
