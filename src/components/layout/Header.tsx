@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-cream-dark/50" 
+          ? "bg-cream/95 backdrop-blur-md shadow-sm border-b border-cream-dark/50" 
           : "bg-transparent"
       )}
     >
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
           >
             <span className={cn(
               "font-coolvetica font-bold transition-all duration-300 text-text-primary",
-              isScrolled ? "text-2xl" : "text-2xl"
+              isScrolled ? "text-xl" : "text-2xl"
             )}>
               {isScrolled ? "AsC" : "ASENTIC"}
             </span>
