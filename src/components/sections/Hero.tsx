@@ -1,6 +1,6 @@
 'use client'
 
-import React, 'useState', useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Container from '@/components/ui/Container'
 import { cn } from '@/lib/utils'
 
@@ -17,6 +17,16 @@ const Hero: React.FC = () => {
       return () => clearTimeout(timer)
     }
   }, [currentWordIndex, words.length])
+
+  const handleHippocratClick = () => {
+    // Переход на страницу Hippocrat AI или открытие чата
+    window.location.href = '/products#hippocrat-ai'
+  }
+
+  const handleAgencyClick = () => {
+    // Переход на страницу агенства
+    window.location.href = '/products#hippocrat-digital'
+  }
 
   return (
     <section className="relative min-h-screen bg-cream flex items-center pt-24 pb-12 md:pt-16 md:pb-16">
@@ -49,7 +59,7 @@ const Hero: React.FC = () => {
               
               {/* Карточка Hippocrat AI */}
               <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="flex flex-col justify-between h-full space-y-4">
+                <div className="flex flex-col justify-between h-full space-y-4 min-h-[240px]">
                   <div>
                     <p className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
                       HIPPOCRAT AI
@@ -61,7 +71,10 @@ const Hero: React.FC = () => {
                       Персональный помощник для студента-медика, доступен сейчас
                     </p>
                   </div>
-                  <button className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200">
+                  <button 
+                    onClick={handleHippocratClick}
+                    className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200"
+                  >
                     Спросить Hippocrat AI
                   </button>
                 </div>
@@ -69,7 +82,7 @@ const Hero: React.FC = () => {
 
               {/* Карточка Digital-Агенство */}
               <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="flex flex-col justify-between h-full space-y-4">
+                <div className="flex flex-col justify-between h-full space-y-4 min-h-[240px]">
                   <div>
                     <p className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
                       DIGITAL-АГЕНСТВО
@@ -81,7 +94,10 @@ const Hero: React.FC = () => {
                       Цифровые решения для медицинских клиник
                     </p>
                   </div>
-                  <button className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200">
+                  <button 
+                    onClick={handleAgencyClick}
+                    className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200"
+                  >
                     Узнать про Агенство
                   </button>
                 </div>
@@ -99,8 +115,10 @@ const Hero: React.FC = () => {
           <div className="lg:col-span-5 hidden lg:flex justify-center items-center h-full">
             <div className="w-full max-w-sm h-96 flex items-center justify-center">
               {/* Место для будущей иконки или иллюстрации */}
-              {/* <img src="/path/to/your/icon.svg" alt="Illustration" /> */}
-              <div className="w-full h-full bg-gray-200 rounded-2xl opacity-50"></div>
+              {/* <img src="/path/to/your/icon.svg" alt="Medical Innovation" /> */}
+              <div className="w-full h-full bg-gray-100 rounded-2xl opacity-30 flex items-center justify-center">
+                <span className="text-gray-400 text-sm font-golos-text">Место для иконки</span>
+              </div>
             </div>
           </div>
           
