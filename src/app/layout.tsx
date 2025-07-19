@@ -51,6 +51,37 @@ export default function RootLayout({
       lang="ru" 
       className={`${manrope.variable} ${golosText.variable} ${tiempoText.variable}`}
     >
+      <head>
+        {/* Принудительная preload шрифтов */}
+        <link
+          rel="preload"
+          href="/fonts/Manrope Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Manrope Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Golos Text Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Golos Text Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="font-golos-text antialiased">
         {children}
       </body>
