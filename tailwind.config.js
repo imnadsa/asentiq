@@ -8,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'manrope': ['var(--font-manrope)', 'sans-serif'],
+        'coolvetica': ['var(--font-coolvetica)', 'sans-serif'],
         'golos-text': ['var(--font-golos-text)', 'sans-serif'],
         'tiempo': ['var(--font-golos-text)', 'sans-serif'], // используем Golos для акцентов тоже
         
         // Для обратной совместимости (можно удалить позже)
-        'styrene-a': ['var(--font-manrope)', 'sans-serif'],
+        'styrene-a': ['var(--font-coolvetica)', 'sans-serif'],
         'styrene-b': ['var(--font-golos-text)', 'sans-serif'],
       },
       colors: {
