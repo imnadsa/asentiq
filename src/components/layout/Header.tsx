@@ -53,35 +53,36 @@ const Header: React.FC = () => {
           {/* Логотип */}
           <Link 
             href="/" 
-            className="flex items-center space-x-2 group"
+            className="flex items-center group"
           >
-            <div className="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center group-hover:bg-accent-600 transition-colors">
-              <span className="text-white font-styrene-a font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl font-styrene-a font-semibold text-text-primary">
-              Asentic
+            <span className={cn(
+              "font-coolvetica font-bold transition-all duration-300 text-text-primary",
+              isScrolled ? "text-xl" : "text-2xl"
+            )}>
+              {isScrolled ? "AsC" : "ASENTIC"}
             </span>
           </Link>
 
-          {/* Десктопная навигация */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "px-4 py-2 rounded-lg font-styrene-b font-medium transition-all duration-200",
-                  "text-text-secondary hover:text-text-primary hover:bg-cream-dark/50",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500"
-                )}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+          {/* Центральная область с навигацией и кнопкой */}
+          <div className="hidden md:flex items-center space-x-2">
+            {/* Навигация */}
+            <div className="flex items-center space-x-1 mr-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "px-4 py-2 rounded-lg font-golos-text font-medium transition-all duration-200",
+                    "text-text-secondary hover:text-text-primary hover:bg-cream-dark/50",
+                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
 
-          {/* CTA кнопка для десктопа */}
-          <div className="hidden md:flex">
+            {/* CTA кнопка */}
             <Button 
               variant="primary" 
               size="md"
@@ -131,7 +132,7 @@ const Header: React.FC = () => {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "block px-4 py-3 rounded-lg font-styrene-b font-medium transition-colors",
+                    "block px-4 py-3 rounded-lg font-golos-text font-medium transition-colors",
                     "text-text-secondary hover:text-text-primary hover:bg-cream-dark/50"
                   )}
                 >
