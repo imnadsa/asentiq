@@ -12,18 +12,13 @@ const Products: React.FC = () => {
         
         {/* Заголовок секции */}
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-accent-50 text-accent-700 rounded-full text-sm font-styrene-b font-medium mb-6">
-            <div className="w-2 h-2 bg-accent-500 rounded-full mr-2" />
-            Наши решения
-          </div>
-          
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-styrene-a font-bold text-text-primary mb-6 leading-tight">
             Продукты, которые меняют{' '}
             <span className="text-accent-600">медицину</span>
           </h2>
           
           <p className="text-lg sm:text-xl text-text-secondary font-styrene-b max-w-3xl mx-auto leading-relaxed">
-            Мы создаем технологические решения, которые делают медицинское образование и практику более эффективными и доступными.
+            Команда энтузиастов, создающая медицинские продукты, которые делают медицинское образование и практику более эффективными и доступными.
           </p>
         </div>
 
@@ -114,7 +109,7 @@ const Products: React.FC = () => {
                         <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        ИИ-помощник для студентов медиков
+                        ИИ-ассистент для студентов медиков
                       </div>
                       <div className="flex items-center text-text-secondary font-styrene-b">
                         <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,19 +131,19 @@ const Products: React.FC = () => {
                         <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
+                        Команда Экспертов
+                      </div>
+                      <div className="flex items-center text-text-secondary font-styrene-b">
+                        <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
                         Цифровизация медицинских процессов
                       </div>
                       <div className="flex items-center text-text-secondary font-styrene-b">
                         <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        Интеграция с медицинскими системами
-                      </div>
-                      <div className="flex items-center text-text-secondary font-styrene-b">
-                        <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        Аналитика и отчетность
+                        Помогаем приводить пациентов из интернета
                       </div>
                     </>
                   )}
@@ -179,10 +174,10 @@ const Products: React.FC = () => {
         <div className="mt-16 lg:mt-20 text-center">
           <div className="bg-gradient-to-r from-accent-50 to-accent-100/50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-styrene-a font-bold text-text-primary mb-4">
-              Готовы попробовать наши решения?
+              Это еще не все!
             </h3>
             <p className="text-lg text-text-secondary font-styrene-b mb-8 max-w-2xl mx-auto">
-              Присоединяйтесь к тысячам медицинских специалистов, которые уже используют наши продукты для улучшения своей работы.
+              Команда Asentic каждый день работает над созданием новый MedTech решений для Российского Здравоохранения
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -198,7 +193,7 @@ const Products: React.FC = () => {
                 size="lg"
                 href="/products"
               >
-                Все продукты
+                Жду обновлений
               </Button>
             </div>
           </div>
