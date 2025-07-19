@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, 'useState', useEffect } from 'react'
 import Container from '@/components/ui/Container'
 import { cn } from '@/lib/utils'
 
@@ -9,6 +9,7 @@ const Hero: React.FC = () => {
   const words = ['Превращаем', 'медицинские', 'вызовы', 'в', 'технологичные', 'решения']
 
   useEffect(() => {
+    // Анимация появления слов остается без изменений
     if (currentWordIndex < words.length) {
       const timer = setTimeout(() => {
         setCurrentWordIndex(prev => prev + 1)
@@ -18,104 +19,91 @@ const Hero: React.FC = () => {
   }, [currentWordIndex, words.length])
 
   return (
-    <section className="relative min-h-screen bg-cream flex items-center justify-center overflow-hidden pt-24 md:pt-16">
-      <Container size="xl" padding="lg" className="relative">
-        <div className="space-y-12">
-          
-          {/* Верхняя часть - заголовок и место для иконки */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section className="relative min-h-screen bg-cream flex items-center pt-24 pb-12 md:pt-16 md:pb-16">
+      <Container size="xl" padding="lg">
+        {/* Главный grid, разделяющий контент и иконку на десктопе */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 lg:gap-x-12 items-start">
+
+          {/* Левая колонка для всего контента */}
+          <div className="lg:col-span-7 flex flex-col gap-y-10">
             
-            {/* Левая часть - заголовок (8 колонок) */}
-            <div className="lg:col-span-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-manrope font-bold text-text-primary leading-[1.1] tracking-tight">
-                {words.map((word, index) => (
-                  <span
-                    key={index}
-                    className={cn(
-                      "inline-block transition-all duration-500 ease-out mr-3",
-                      index < currentWordIndex 
-                        ? "opacity-100 translate-y-0" 
-                        : "opacity-0 translate-y-4"
-                    )}
-                  >
-                    {word}
-                  </span>
-                ))}
-              </h1>
-            </div>
+            {/* 1. Заголовок */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-manrope font-bold text-text-primary leading-[1.1] tracking-tight min-h-[180px] sm:min-h-[220px]">
+              {words.map((word, index) => (
+                <span
+                  key={index}
+                  className={cn(
+                    "inline-block transition-all duration-500 ease-out mr-3",
+                    index < currentWordIndex 
+                      ? "opacity-100 translate-y-0" 
+                      : "opacity-0 translate-y-4"
+                  )}
+                >
+                  {word}
+                </span>
+              ))}
+            </h1>
 
-            {/* Правая часть - место для иконки (4 колонки) */}
-            <div className="lg:col-span-4 hidden lg:flex justify-center items-center">
-              <div className="w-64 h-64 flex items-center justify-center">
-                {/* Место для будущей иконки */}
-                <div className="w-full h-full bg-transparent" />
-              </div>
-            </div>
-          </div>
-
-          {/* Карточки продуктов - ограничиваем ширину на десктопе */}
-          <div className="flex justify-center">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-4xl">
+            {/* 2. Блок с двумя карточками */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               
               {/* Карточка Hippocrat AI */}
-              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square lg:aspect-auto lg:min-h-[280px]">
-                <div className="space-y-4 h-full flex flex-col">
-                  <div className="flex-1">
-                    <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
+              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="flex flex-col justify-between h-full space-y-4">
+                  <div>
+                    <p className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
                       HIPPOCRAT AI
-                    </div>
+                    </p>
                     <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
                       Опробуйте Hippocrat AI
                     </h2>
                     <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
-                      Hippocrat AI - персональный помощник для студента-медика, доступен сейчас
+                      Персональный помощник для студента-медика, доступен сейчас
                     </p>
                   </div>
-                  
-                  <button className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200 mt-auto">
+                  <button className="w-full bg-text-primary text-white px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:bg-gray-800 transition-colors duration-200">
                     Спросить Hippocrat AI
                   </button>
                 </div>
               </div>
 
               {/* Карточка Digital-Агенство */}
-              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 aspect-square lg:aspect-auto lg:min-h-[280px]">
-                <div className="space-y-4 h-full flex flex-col">
-                  <div className="flex-1">
-                    <div className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
+              <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="flex flex-col justify-between h-full space-y-4">
+                  <div>
+                    <p className="text-xs font-manrope font-semibold text-text-secondary uppercase tracking-wider mb-2">
                       DIGITAL-АГЕНСТВО
-                    </div>
+                    </p>
                     <h2 className="text-xl font-manrope font-bold text-text-primary mb-3">
                       Медицинское Digital-Агенство
                     </h2>
                     <p className="text-sm text-text-secondary font-golos-text leading-relaxed">
-                      Hippocrat Digital - цифровые решения для медицинских клиник
+                      Цифровые решения для медицинских клиник
                     </p>
                   </div>
-                  
-                  <button className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200 mt-auto">
+                  <button className="w-full border-2 border-cream-dark text-text-primary px-6 py-3 rounded-xl font-golos-text font-medium text-sm hover:border-text-primary hover:shadow-sm transition-all duration-200">
                     Узнать про Агенство
                   </button>
                 </div>
               </div>
             </div>
+
+            {/* 3. Текст "лаборатория" без кнопки */}
+            <p className="text-text-secondary font-golos-text text-sm max-w-md leading-relaxed text-left pt-4">
+              Asentic — лаборатория МедТех инноваций. Мы постоянно работаем над созданием новых решений в медицине.
+            </p>
+
           </div>
 
-          {/* Компактная кнопка лаборатории */}
-          <div className="text-center">
-            <div className="inline-flex flex-col items-center space-y-3">
-              <p className="text-text-secondary font-golos-text text-sm max-w-xl leading-relaxed">
-                Asentic — лаборатория МедТех инноваций. Мы постоянно работаем над созданием новых решений в медицине.
-              </p>
-              
-              <button className="bg-accent-50 text-accent-700 px-5 py-2 rounded-lg font-golos-text font-medium text-sm hover:bg-accent-100 transition-colors duration-200 flex items-center space-x-2">
-                <span>Наша лаборатория</span>
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
+          {/* Правая колонка - место для иконки (видна только на LG экранах) */}
+          <div className="lg:col-span-5 hidden lg:flex justify-center items-center h-full">
+            <div className="w-full max-w-sm h-96 flex items-center justify-center">
+              {/* Место для будущей иконки или иллюстрации */}
+              {/* <img src="/path/to/your/icon.svg" alt="Illustration" /> */}
+              <div className="w-full h-full bg-gray-200 rounded-2xl opacity-50"></div>
             </div>
           </div>
+          
         </div>
       </Container>
     </section>
