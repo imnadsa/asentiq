@@ -1,67 +1,50 @@
 import localFont from 'next/font/local'
 
-export const styreneA = localFont({
+// Manrope для заголовков (замена Styrene A)
+export const manrope = localFont({
   src: [
     {
-      path: './../../public/fonts/Styrene A Regular Trial.woff2',
+      path: './../../public/fonts/Manrope Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './../../public/fonts/Styrene A Medium Trial.woff2',
+      path: './../../public/fonts/Manrope Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './../../public/fonts/Styrene A Bold Trial.woff2',
+      path: './../../public/fonts/Manrope Bold.woff2',
       weight: '700',
       style: 'normal',
     },
   ],
-  variable: '--font-styrene-a',
+  variable: '--font-manrope',
   display: 'swap',
 })
 
-export const styreneB = localFont({
+// Golos Text для основного текста (замена Styrene B)
+export const golosText = localFont({
   src: [
     {
-      path: './../../public/fonts/Styrene B Regular Trial.woff2',
+      path: './../../public/fonts/Golos Text Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './../../public/fonts/Styrene B Medium Trial.woff2',
+      path: './../../public/fonts/Golos Text Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './../../public/fonts/Styrene B Bold Trial.woff2',
+      path: './../../public/fonts/Golos Text Bold.woff2',
       weight: '700',
       style: 'normal',
     },
   ],
-  variable: '--font-styrene-b',
+  variable: '--font-golos-text',
   display: 'swap',
 })
 
-export const tiempoText = localFont({
-  src: [
-    {
-      path: './../../public/fonts/Test Tiempos Text Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './../../public/fonts/Test Tiempos Text Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './../../public/fonts/Test Tiempos Text Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-tiempo',
-  display: 'swap',
-})
+// Используем Golos Text и для акцентов (можно позже добавить отдельный serif)
+export const tiempoText = golosText
