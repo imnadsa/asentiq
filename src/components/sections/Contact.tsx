@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-cream">
         <Container size="md" padding="lg">
           <Card variant="elevated" padding="xl" className="text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -80,18 +80,12 @@ const Contact: React.FC = () => {
           {/* Левая часть - информация */}
           <div className="space-y-8">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-accent-50 text-accent-700 rounded-full text-sm font-styrene-b font-medium mb-6">
-                <div className="w-2 h-2 bg-accent-500 rounded-full mr-2" />
-                Свяжитесь с нами
-              </div>
-              
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-styrene-a font-bold text-text-primary mb-6 leading-tight">
                 Готовы обсудить ваш проект?
               </h1>
               
               <p className="text-lg text-text-secondary font-styrene-b leading-relaxed">
-                Мы всегда открыты для новых идей и сотрудничества. Расскажите нам о ваших потребностях, 
-                и мы найдем лучшее решение.
+                Мы всегда открыты для новых идей и сотрудничества.
               </p>
             </div>
 
@@ -117,20 +111,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-styrene-a font-semibold text-text-primary mb-1">Время ответа</h3>
-                  <p className="text-text-secondary font-styrene-b">Обычно в течение 24 часов</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-styrene-a font-semibold text-text-primary mb-1">Локация</h3>
-                  <p className="text-text-secondary font-styrene-b">Работаем удаленно</p>
+                  <p className="text-text-secondary font-styrene-b">В течение 24 часов</p>
                 </div>
               </div>
             </div>
