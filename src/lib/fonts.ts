@@ -1,20 +1,20 @@
 import localFont from 'next/font/local'
 
-// Manrope для заголовков - АБСОЛЮТНЫЕ ПУТИ
+// Manrope для заголовков (замена Styrene A)
 export const manrope = localFont({
   src: [
     {
-      path: '/fonts/Manrope Regular.woff2',
+      path: './../../public/fonts/Manrope Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '/fonts/Manrope Medium.woff2',
+      path: './../../public/fonts/Manrope Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '/fonts/Manrope Bold.woff2',
+      path: './../../public/fonts/Manrope Bold.woff2',
       weight: '700',
       style: 'normal',
     },
@@ -23,21 +23,21 @@ export const manrope = localFont({
   display: 'swap',
 })
 
-// Golos Text для основного текста - АБСОЛЮТНЫЕ ПУТИ
+// Golos Text для основного текста (замена Styrene B)
 export const golosText = localFont({
   src: [
     {
-      path: '/fonts/Golos Text Regular.woff2',
+      path: './../../public/fonts/Golos Text Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '/fonts/Golos Text Medium.woff2',
+      path: './../../public/fonts/Golos Text Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '/fonts/Golos Text Bold.woff2',
+      path: './../../public/fonts/Golos Text Bold.woff2',
       weight: '700',
       style: 'normal',
     },
@@ -46,5 +46,5 @@ export const golosText = localFont({
   display: 'swap',
 })
 
-// Используем Golos Text и для акцентов
+// Используем Golos Text и для акцентов (можно позже добавить отдельный serif)
 export const tiempoText = golosText
