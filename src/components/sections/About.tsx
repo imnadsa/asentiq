@@ -93,7 +93,7 @@ const About: React.FC = () => {
               style={{ backgroundColor: value.bgColor }}
             >
               {/* Место для иконки */}
-              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-8 bg-white bg-opacity-50 rounded-2xl flex items-center justify-center">
+              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-8 flex items-center justify-center">
                 {value.icon}
               </div>
               
