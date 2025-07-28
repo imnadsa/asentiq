@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-coolvetica font-bold text-text-primary mb-6 leading-tight">
-                Готовы обсудить ваш проект?
+                Готовы пообщаться?
               </h1>
               
               <p className="text-lg text-text-secondary font-golos-text leading-relaxed">
