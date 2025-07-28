@@ -59,7 +59,7 @@ const Header: React.FC = () => {
               "font-coolvetica font-bold transition-all duration-300 text-text-primary",
               isScrolled ? "text-xl" : "text-2xl"
             )}>
-              {isScrolled ? "AsC" : "ASENTIC"}
+              {isScrolled ? "AsQ" : "ASENTIQ"}
             </span>
           </Link>
 
