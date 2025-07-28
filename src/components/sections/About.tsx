@@ -89,14 +89,9 @@ const About: React.FC = () => {
           {values.map((value) => (
             <div
               key={value.id}
-              className="rounded-3xl p-8 lg:p-10 transition-transform duration-300 hover:scale-105"
+              className="rounded-xl p-6 lg:p-8 transition-transform duration-300 hover:scale-105"
               style={{ backgroundColor: value.bgColor }}
             >
-              {/* Место для иконки */}
-              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-8 flex items-center justify-center">
-                {value.icon}
-              </div>
-              
               {/* Только заголовок ценности, без описания */}
               <h4 className="text-xl lg:text-2xl font-manrope font-bold text-text-primary leading-tight">
                 {value.title}
