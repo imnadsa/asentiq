@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                   <span className="text-gray-900 font-coolvetica font-bold text-lg">A</span>
                 </div>
                 <span className="text-xl font-coolvetica font-semibold text-white">
-                  Asentic
+                  Asentiq
                 </span>
               </Link>
             </div>
