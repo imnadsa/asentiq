@@ -188,7 +188,7 @@ const Products: React.FC = () => {
               Это еще не все!
             </h3>
             <p className="text-lg text-text-secondary font-golos-text mb-8 max-w-2xl mx-auto">
-              Команда Asentic каждый день работает над созданием новый MedTech решений для Российского Здравоохранения
+              Команда Asentiq каждый день работает над созданием новый MedTech решений для Российского Здравоохранения
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
