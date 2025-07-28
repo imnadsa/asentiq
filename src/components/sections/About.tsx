@@ -46,7 +46,7 @@ const About: React.FC = () => {
           {/* Левая колонка - акцентный заголовок */}
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-text-primary leading-tight">
-              В Asentic мы создаём цифровые продукты для здорового будущего медицины.
+              В Asentiq мы создаём цифровые продукты для здорового будущего медицины.
             </h2>
           </div>
           
