@@ -22,7 +22,7 @@ export default function AboutPage() {
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-styrene-a font-bold text-text-primary mb-6 leading-tight">
                 История и миссия{' '}
-                <span className="text-accent-600">Asentic</span>
+                <span className="text-accent-600">Asentiq</span>
               </h1>
               
               <p className="text-xl text-text-secondary font-styrene-b max-w-3xl mx-auto leading-relaxed">
