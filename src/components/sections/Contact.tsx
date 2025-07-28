@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-coolvetica font-semibold text-text-primary mb-1">Email</h3>
-                  <p className="text-text-secondary font-golos-text">hello@asentic.com</p>
+                  <p className="text-text-secondary font-golos-text">hello@asentiq.com</p>
                 </div>
               </div>
 
