@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
-  name: 'Asentic',
-  title: 'Asentic - MedTech Innovation',
+  name: 'Asentiq',
+  title: 'Asentiq - MedTech Innovation',
   description: 'Развиваем медицинские технологии и AI для улучшения здравоохранения',
   url: 'https://asentic.com',
   email: 'hello@asentic.com',
