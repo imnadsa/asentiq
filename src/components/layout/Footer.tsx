@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import { SITE_CONFIG } from '@/lib/constants'
 
+// ИСПРАВЛЕНИЕ №1: Добавлен недостающий массив 'social'
 const navigation = {
   product: [
     { name: 'Hippocrat AI', href: '/products#hippocrat-ai' },
@@ -14,6 +15,19 @@ const navigation = {
   solutions: [
     { name: 'Для студентов', href: '/solutions/students' },
     { name: 'Для клиник', href: '/solutions/clinics' },
+  ],
+  // 👇 ОБЯЗАТЕЛЬНО ДОБАВЬТЕ ЭТОТ МАССИВ
+  social: [
+    {
+      name: 'Telegram',
+      href: '#', // Замените на реальную ссылку
+      icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"> {/* SVG иконка */} <path d="M..."/> </svg>,
+    },
+    {
+      name: 'VK',
+      href: '#', // Замените на реальную ссылку
+      icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"> {/* SVG иконка */} <path d="M..."/> </svg>,
+    },
   ],
 }
 
@@ -95,6 +109,10 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
+
+          {/* ИСПРАВЛЕНИЕ №2: Вот правильное место для закрывающих тегов */}
+          </div> {/* <-- Этот тег закрывает <div className="grid..."> */}
+        </div> {/* <-- Этот тег закрывает <div className="py-16..."> */}
 
 
         {/* Нижняя часть */}
