@@ -16,6 +16,7 @@ const Contact: React.FC = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -28,24 +29,43 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Имитация отправки формы
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    // Сброс формы через 3 секунды
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: '',
-        type: 'general'
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 3000)
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Произошла ошибка при отправке')
+      }
+
+      setIsSubmitted(true)
+      
+      // Сброс формы через 5 секунд
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: '',
+          type: 'general'
+        })
+      }, 5000)
+
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setError(error instanceof Error ? error.message : 'Произошла ошибка при отправке. Попробуйте позже или напишите на hello@asentiq.com')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -120,6 +140,13 @@ const Contact: React.FC = () => {
           {/* Правая часть - форма */}
           <Card variant="elevated" padding="xl">
             <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* Отображение ошибки */}
+              {error && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                  <p className="text-red-600 font-golos-text text-sm">{error}</p>
+                </div>
+              )}
               
               {/* Тип обращения */}
               <div>
