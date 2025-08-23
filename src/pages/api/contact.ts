@@ -1,6 +1,15 @@
 // src/pages/api/contact.ts
 import { NextApiRequest, NextApiResponse } from 'next'
 
+// Типы для формы
+interface ContactFormData {
+  name: string
+  email: string
+  company?: string
+  message: string
+  type: 'general' | 'partnership' | 'investor' | 'career'
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Разрешаем только POST запросы
   if (req.method !== 'POST') {
@@ -8,14 +17,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { name, email, company, message, type } = req.body
+    const { name, email, company, message, type }: ContactFormData = req.body
 
     // Ваши данные бота (прямо в коде)
-    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID
+    const TELEGRAM_BOT_TOKEN = '8421391298:AAH8mgMZo5FfN1X8KMspISZYuVadBdtoHJM'
+    const TELEGRAM_CHAT_ID = '1053481829'
 
     // Определяем тип обращения на русском
-    const typeLabels = {
+    const typeLabels: Record<ContactFormData['type'], string> = {
       general: 'Общие вопросы',
       partnership: 'Партнерство',
       investor: 'Инвестиции',
@@ -29,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 👤 <b>Имя:</b> ${name}
 📧 <b>Email:</b> ${email}
 🏢 <b>Компания:</b> ${company || 'Не указана'}
-📋 <b>Тип обращения:</b> ${typeLabels[type] || type}
+📋 <b>Тип обращения:</b> ${typeLabels[type]}
 
 💬 <b>Сообщение:</b>
 ${message}
