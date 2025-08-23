@@ -105,7 +105,7 @@ const Products: React.FC = () => {
               variant="primary" 
               size="md"
               className="w-full group-hover:scale-105 transition-transform"
-              href="/products#hippocrat-ai"
+              href="https://t.me/hippocratAI_bot"
             >
               Попробовать
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,7 +168,7 @@ const Products: React.FC = () => {
               variant="primary" 
               size="md"
               className="w-full group-hover:scale-105 transition-transform"
-              href="/products#hippocrat-digital"
+              href="https://hippocrat-digital.ru/"
             >
               Узнать больше
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
