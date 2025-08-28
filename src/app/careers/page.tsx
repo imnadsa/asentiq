@@ -268,7 +268,7 @@ const CareersPage: React.FC = () => {
 
         {/* Дополнительная информация */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
-          <Card variant="soft" padding="xl">
+          <Card variant="elevated" padding="xl">
             <h3 className="text-xl font-coolvetica font-bold text-text-primary mb-4">
               Не нашли подходящую вакансию?
             </h3>
