@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import Container from '@/components/ui/Container'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 import { cn } from '@/lib/utils'
 
 interface JobPosition {
@@ -142,7 +144,9 @@ const CareersPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cream pt-20 pb-16">
+    <>
+      <Header />
+      <div className="min-h-screen bg-cream pt-20 pb-16">
       <Container size="xl" padding="lg">
         
         {/* Hero секция */}
@@ -151,20 +155,20 @@ const CareersPage: React.FC = () => {
             Присоединяйтесь к команде будущего медицины
           </h1>
           
-          <div className="prose prose-lg max-w-none font-golos-text text-text-secondary leading-relaxed space-y-6">
+          <div className="prose prose-lg max-w-none font-golos-text text-text-secondary leading-relaxed space-y-6 text-base">
             <p>
-              **Всем привет!** Команда Hippocrat AI растет, и мы ищем в ядро проекта людей, которые хотят создавать будущее MedTech. 
+              Всем привет! Команда Hippocrat AI растет, и мы ищем в ядро проекта людей, которые хотят создавать будущее MedTech. 
               Нам уже доверяют тысячи студентов, и мы только начинаем.
             </p>
             
             <p>
-              Мы верим в то, что **создавать качественные продукты для студентов, могут только сами студенты!** 
-              Именно поэтому мы ищем не просто сотрудников, а **партнеров-единомышленников**.
+              Мы верим в то, что создавать качественные продукты для студентов, могут только сами студенты! 
+              Именно поэтому мы ищем не просто сотрудников, а партнеров-единомышленников.
             </p>
             
             <p>
               Asentiq — это молодая medtech компания, которая превращает медицинские вызовы в технологичные решения. 
-              Мы Apple в мире медицины в самом ее начале. **Стань частью этой истории.**
+              Мы Apple в мире медицины в самом ее начале. Стань частью этой истории.
             </p>
           </div>
         </div>
@@ -218,22 +222,22 @@ const CareersPage: React.FC = () => {
                   </div>
 
                   {/* Краткое описание */}
-                  <p className="text-text-secondary font-golos-text leading-relaxed">
+                  <p className="text-text-secondary font-golos-text leading-relaxed text-base">
                     {job.description}
                   </p>
 
                   {/* Раскрывающееся подробное описание */}
                   {expandedJob === job.id && (
                     <div className="mt-8 pt-8 border-t border-cream-dark animate-slide-down">
-                      <div className="prose prose-lg max-w-none">
+                      <div className="prose prose-xl max-w-none">
                         <div 
-                          className="font-golos-text text-text-secondary leading-relaxed space-y-4"
+                          className="font-golos-text text-text-secondary leading-relaxed space-y-4 text-base"
                           dangerouslySetInnerHTML={{ 
                             __html: job.fullDescription
                               .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-text-primary">$1</strong>')
-                              .replace(/•\s(.*?)$/gm, '<div class="flex items-start gap-3 mb-2"><span class="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></span><span>$1</span></div>')
-                              .replace(/\n\n/g, '</p><p class="mb-4">')
-                              .replace(/^/, '<p class="mb-4">')
+                              .replace(/•\s(.*?)$/gm, '<div class="flex items-start gap-3 mb-3"><span class="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></span><span class="text-base">$1</span></div>')
+                              .replace(/\n\n/g, '</p><p class="mb-4 text-base">')
+                              .replace(/^/, '<p class="mb-4 text-base">')
                               .replace(/$/, '</p>')
                           }} 
                         />
@@ -272,7 +276,7 @@ const CareersPage: React.FC = () => {
             <h3 className="text-xl font-coolvetica font-bold text-text-primary mb-4">
               Не нашли подходящую вакансию?
             </h3>
-            <p className="text-text-secondary font-golos-text leading-relaxed mb-6">
+            <p className="text-text-secondary font-golos-text leading-relaxed mb-6 text-base">
               Мы всегда открыты для талантливых людей! Если вы чувствуете, что можете принести пользу нашей команде, 
               напишите нам о своих навыках и интересах.
             </p>
@@ -288,7 +292,9 @@ const CareersPage: React.FC = () => {
         </div>
 
       </Container>
-    </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
