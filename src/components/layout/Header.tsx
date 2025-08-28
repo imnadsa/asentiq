@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Главная', href: '/' },
   { name: 'Продукты', href: '/products' },
   { name: 'О нас', href: '/about' },
+  { name: 'Вакансии', href: '/careers' },
   { name: 'Контакты', href: '/contact' },
 ]
 
