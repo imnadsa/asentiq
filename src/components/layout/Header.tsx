@@ -45,8 +45,8 @@ const Header: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-cream/95 backdrop-blur-md shadow-sm border-b border-cream-dark/50" 
-          : "bg-transparent"
+          ? "bg-cream shadow-sm border-b border-cream-dark/50" 
+          : "bg-cream/95"
       )}
     >
       <Container size="xl" padding="lg">
