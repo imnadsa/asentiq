@@ -57,7 +57,7 @@ const About: React.FC = () => {
           
           {/* Левая колонка - акцентный заголовок */}
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-text-primary leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-coolvetica font-bold text-text-primary leading-tight">
               В Asentiq мы создаём цифровые продукты для здорового будущего медицины.
             </h2>
           </div>
@@ -79,7 +79,7 @@ const About: React.FC = () => {
 
         {/* Заголовок для ценностей */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl lg:text-3xl font-manrope font-bold text-text-primary mb-4">
+          <h3 className="text-2xl lg:text-3xl font-coolvetica font-bold text-text-primary mb-4">
             Наши ценности
           </h3>
         </div>
@@ -93,7 +93,7 @@ const About: React.FC = () => {
               style={{ backgroundColor: value.bgColor }}
             >
               {/* Только заголовок ценности, без описания */}
-              <h4 className="text-xl lg:text-2xl font-manrope font-bold text-text-primary leading-tight">
+              <h4 className="text-xl lg:text-2xl font-coolvetica font-bold text-text-primary leading-tight">
                 {value.title}
               </h4>
             </div>
@@ -102,7 +102,7 @@ const About: React.FC = () => {
 
         {/* CTA секция как у Anthropic */}
         <div className="text-center space-y-8">
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-manrope font-bold text-text-primary leading-tight max-w-4xl mx-auto">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-coolvetica font-bold text-text-primary leading-tight max-w-4xl mx-auto">
             Хотите помочь нам создавать этичный мир технологичной медицины?
           </h3>
           
