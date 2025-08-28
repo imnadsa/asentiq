@@ -18,39 +18,12 @@ const footerSections = [
     links: [
       { name: 'О нас', href: '/about' },
       { name: 'Вакансии', href: '/careers' },
-      { name: 'Новости', href: '#' },
     ]
   },
   {
     title: 'Поддержка',
     links: [
       { name: 'Контакты', href: '/contact' },
-      { name: 'FAQ', href: '#' },
-      { name: 'Документация', href: '#' },
-    ]
-  },
-  {
-    title: 'Ресурсы',
-    links: [
-      { name: 'Блог', href: '#' },
-      { name: 'Исследования', href: '#' },
-      { name: 'API', href: '#' },
-    ]
-  },
-  {
-    title: 'Безопасность',
-    links: [
-      { name: 'Конфиденциальность', href: '#' },
-      { name: 'Условия использования', href: '#' },
-      { name: 'Безопасность', href: '#' },
-    ]
-  },
-  {
-    title: 'Сообщество',
-    links: [
-      { name: 'GitHub', href: '#' },
-      { name: 'Telegram', href: 'https://t.me/hippocrat_ai_support' },
-      { name: 'Email', href: 'mailto:hello@asentiq.com' },
     ]
   }
 ]
