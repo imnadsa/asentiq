@@ -22,7 +22,7 @@ const jobPositions: JobPosition[] = [
     id: 'ambassador',
     title: 'Амбассадор / Лицо бренда Hippocrat AI',
     department: 'Маркетинг',
-    type: 'Full-time',
+    type: 'Part-time',
     description: 'Стань голосом и лицом нашего бренда, создавай виральный контент и развивай комьюнити студентов-медиков.',
     fullDescription: `**Роль кандидата «Лица бренда Hippocrat AI»**
 
@@ -64,7 +64,7 @@ const jobPositions: JobPosition[] = [
     id: 'python-developer',
     title: 'Python разработчик',
     department: 'Разработка',
-    type: 'Full-time',
+    type: 'Part-time',
     description: 'Создавай AI-решения для медицины вместе с командой, которая понимает как медицину, так и технологии.',
     fullDescription: `**Ты студент-медик и пишешь код? Мы ищем тебя, чтобы вместе изменить будущее медицины.**
 
